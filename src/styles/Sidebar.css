@@ -1,0 +1,12 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;   /* 🔥 IMPORTANT */
+  left: 0;
+  top: 0;
+}
+
+/* Push logout to bottom */
+.logout-btn {
+  margin-top: auto;
+}

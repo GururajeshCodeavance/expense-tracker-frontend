@@ -1,0 +1,87 @@
+/* Heading */
+.auth-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  animation: fadeDown 0.8s ease;
+}
+
+/* Subtitle */
+.auth-subtitle {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  animation: fadeDown 1.2s ease;
+}
+
+/* Card animation */
+.auth-card {
+  width: 360px;
+  padding: 35px;
+  border-radius: 16px;
+
+  /* 🔥 REAL GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  color: white;
+
+  animation: fadeUp 0.8s ease;
+  transition: 0.3s;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.auth-card input::placeholder {
+  color: #ddd;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+/* Button hover glow */
+.auth-card button:hover {
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

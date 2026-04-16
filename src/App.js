@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("token") ? true : false
   );
+
+  const [showLogin, setShowLogin] = useState(true);
+
+  if (!isLoggedIn) {
+    return showLogin ? (
+      <Login setIsLoggedIn={setIsLoggedIn} setShowLogin={setShowLogin} />
+    ) : (
+      <Register setShowLogin={setShowLogin} />
+    );
+  }
+
+ return (
+  <div className="layout">
+    <Dashboard />
+  </div>
+);
 }
 
 export default App;
